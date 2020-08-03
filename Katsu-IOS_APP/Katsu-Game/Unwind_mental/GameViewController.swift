@@ -13,21 +13,14 @@ import GameplayKit
 class GameViewController: UIViewController {
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
+        super.viewDidLoad() 
         let skView = self.view as! SKView
         skView.showsFPS = true
         skView.showsNodeCount = true
-        
-        skView.ignoresSiblingOrder = true
-        
-        let scene = GameScene(size: skView.bounds.size)
-        
+        skView.ignoresSiblingOrder = true   
+        let scene = GameScene(size: skView.bounds.size) 
         scene.scaleMode = .resizeFill
-        
-        skView.presentScene(scene)
-        
-        
+        skView.presentScene(scene)     
     }
 
     override var shouldAutorotate: Bool {
@@ -37,7 +30,8 @@ class GameViewController: UIViewController {
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         if UIDevice.current.userInterfaceIdiom == .phone {
             return .allButUpsideDown
-        } else {
+        } 
+        else {
             return .all
         }
     }
